@@ -12,10 +12,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var jumping = false
+    
     var body: some View {
         
-        VStack {
+        ZStack {
             
+            Circle()
+                .stroke(lineWidth: 5)
+                .frame(width: 20, height: 20)
+                .rotation3DEffect(.degrees(75), axis: (x: 1, y: 0, z: 0))
+                .offset(y: jumping ? 150 : -180)
         }
     }
 }
