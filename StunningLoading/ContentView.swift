@@ -76,7 +76,7 @@ struct ContentView: View {
                     .offset(y: jumping ? 150 : -180)
                     .animation(.interpolatingSpring(stiffness: 100, damping: 5).repeatForever(autoreverses: true).delay(0.35), value: jumping)
             }
-            .foregroundColor(Color("second"))
+            .foregroundColor(.white)
             .onAppear {
                 jumping.toggle()
             }
